@@ -2,397 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="ENG Sallam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nexcent — Landing Page</title>
-  <style>
-:root {
-  --accent: #4CAF50;
-  --accent-dark: #3b8b3f;
-  --text-dark: #1a1a1a;
-  --text-light: #6b6b6b;
-  --bg-light: #f5f7fa;
-  --bg-white: #ffffff;
-  --footer-bg: #263238;
-  --font-main: 'Poppins', sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  color: var(--text-dark);
-  background: var(--bg-light);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 80px;
-  background: var(--bg-white);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 20px;
-  color: var(--text-dark);
-}
-
-.nav {
-  display: flex;
-  gap: 30px;
-}
-
-.nav a {
-  color: var(--text-light);
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  color: var(--accent);
-}
-
-.header-actions {
-  display: flex;
-  gap: 14px;
-}
-
-.btn {
-  padding: 8px 18px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background: var(--accent-dark);
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 100px;
-  background: var(--bg-white);
-}
-
-.hero-title {
-  font-size: 40px;
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.hero-sub {
-  color: var(--accent);
-  font-size: 40px;
-  font-weight: 800;
-}
-
-.hero-desc {
-  color: var(--text-light);
-  font-size: 15px;
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-.slider-dots {
-  display: flex;
-  gap: 6px;
-  margin-top: 20px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-}
-
-.dot.active {
-  background: var(--accent);
-}
-
-.clients-area {
-  background: var(--bg-light);
-  text-align: center;
-  padding: 60px 0;
-}
-
-.clients-title {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.clients-sub {
-  color: var(--text-light);
-  font-size: 14px;
-  margin: 6px 0 30px;
-}
-
-.clients-logos {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.center-head {
-  text-align: center;
-  margin-top: 70px;
-}
-
-.features-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0 80px;
-}
-
-.feature-card {
-  background: var(--bg-white);
-  border-radius: 8px;
-  padding: 25px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.feature-card h4 {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.feature-card p {
-  color: var(--text-light);
-  font-size: 14px;
-  line-height: 1.5;
-}
-.two-col,
-.two-col-alt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 100px;
-  background: var(--bg-white);
-}
-
-.two-col-alt {
-  background: var(--bg-light);
-}
-
-.article {
-  max-width: 480px;
-}
-
-.article-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.article-desc {
-  color: var(--text-light);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 25px;
-}
-
-.stats-strip {
-  background: var(--bg-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 100px;
-}
-
-.stats-left {
-  max-width: 400px;
-}
-
-.stat-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 100px;
-  max-width: 500px;
-}
-
-.stats-box {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 200px;
-}
-
-.stats-box img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
-
-.stats-box .num {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-
-.stats-box .label {
-  color: var(--text-light);
-  font-size: 13px;
-  margin-top: 2px;
-}
-
-.stats-box div {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.4;
-}
-
-.testimonial-big {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 80px 100px;
-  background: var(--bg-white);
-}
-
-.testimonial-big .text {
-  max-width: 600px;
-}
-
-.testimonial-big p {
-  color: var(--text-light);
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.testimonial-name {
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-top: 10px;
-}
-
-.blog-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px 100px;
-}
-
-.blog-card {
-  background: var(--bg-white);
-  border-radius: 10px;
-  overflow: hidden;
-  width: 280px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.blog-card .read {
-  padding: 14px;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-
-
-.cta-band {
-  text-align: center;
-  padding: 70px 0;
-  background: var(--bg-white);
-}
-
-.cta-band h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-
-
-.site-footer {
-  background: var(--footer-bg);
-  color: #dfe7ea;
-  padding: 60px 100px;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-.footer-left {
-  max-width: 250px;
-}
-
-.footer-left img {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-.footer-left p {
-  font-size: 13px;
-  color: #cfd6d9;
-  line-height: 1.6;
-}
-
-.footer-right {
-  display: flex;
-  gap: 60px;
-}
-
-.footer-col h4 {
-  color: #fff;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.footer-col p {
-  color: #c8d0d3;
-  font-size: 13px;
-  margin: 5px 0;
-}
-
-.footer-input {
-  margin-top: 8px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: none;
-  width: 180px;
-}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- 
-  
 
-  <header class="header">
+  <div class="bg-gray">
+  <header class="header container">
     <div class="brand">
-      <img src="Icon (1).svg" alt="">
-      <div style="font-weight: 800;">Nexcent</div>
+      <img src="images/logo.svg" alt="">
+      <span>Nexcent</span>
     </div>
     <nav class="nav">
       <a href="#">Home</a>
@@ -407,36 +30,38 @@ img {
       <a class="btn primary" href="#">Sign up</a>
     </div>
   </header>
+  </div>
 
- 
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-title">Lessons and insights</div>
-      <div class="hero-sub">from 8 years</div>
-      <p class="hero-desc">Where to grow your business as a photographer, sitter or social media?</p>
-      <div><a class="btn primary" href="#">Register</a></div>
-      <div class="slider-dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+  <div class=" bg-gray">
+  <section class="hero container">
+    <div class="content">
+        <div class="hero-left">
+        <h2 class="hero-title">Lessons and insights <span>from 8 years</span></h2>
+        <p class="hero-desc">Where to grow your business as a photographer, sitter or social media?</p>
+        <div><a class="btn primary" href="#">Register</a></div>
+      </div>
+      <div class="hero-right">
+        <img src="Illustration.png" alt="">
       </div>
     </div>
-    <div class="hero-right">
-      <img src="Illustration.png" alt="">
+    <div class="slider-dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
     </div>
   </section>
+</div>
 
-  <section class="clients-area">
+  <section class="clients-area container">
     <div class="clients-title">Our Clients</div>
     <div class="clients-sub">We have been working with some Fortune 500+ clients</div>
     <div class="clients-logos">
-      <img src="Logo.svg" alt="">
-      <img src="Logo (1).svg" alt="">
-      <img src="Logo (3).svg" alt="">
-      <img src="Logo (4).svg" alt="">
-      <img src="Logo (5).svg" alt="">
-      <img src="Logo (6).svg" alt="">
-      <img src="Logo (7).svg" alt="">
+      <img src="images/clients/Logo (2).svg" alt="">
+      <img src="images/clients/Logo (3).svg" alt="">
+      <img src="images/clients/Logo (4).svg" alt="">
+      <img src="images/clients/Logo (5).svg" alt="">
+      <img src="images/clients/Logo (6).svg" alt="">
+      <img src="images/clients/Logo (7).svg" alt="">
     </div>
   </section>
   <div class="center-head">
